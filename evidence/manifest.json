@@ -1,0 +1,1022 @@
+{
+  "schema": 1,
+  "submission_prefix": "L13_L14_Team5",
+  "slot": "L13 + L14",
+  "team": 5,
+  "note": "Original raw evidence copied byte-for-byte. Historical source hashes identify the code used for each recording.",
+  "runs": [
+    {
+      "group": "report",
+      "run_id": "20261027T150945Z-5b433df7",
+      "scenario": "loss",
+      "method": "rf_without_loss_guard",
+      "topology": "long_diamond",
+      "load_mbps": 4.0,
+      "capacity_mbps": 10.0,
+      "failback": false,
+      "source_sha256": "a7ef80198b39ff67c716687eea6b7b7ce16b05030494e248befac2af109c753e",
+      "model_sha256": "5f3528e6490b50c7fc7e2a33f1556533ac5ebc00356a85f99235ae4458983001",
+      "files": [
+        {
+          "name": "application-iperf.json",
+          "bytes": 47785,
+          "sha256": "dfef41a42b9b8bb7e6dfc141cc304a67b3eb6cfc688498b2d23db18b72797096"
+        },
+        {
+          "name": "b2-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "b4-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "cnS1-flows.txt",
+          "bytes": 964,
+          "sha256": "a22320b28ba83227440860ece7269cdc21e2fbb47e2e57317fb3df4703676d07"
+        },
+        {
+          "name": "cnS2-flows.txt",
+          "bytes": 944,
+          "sha256": "a2ab2d8c3ce298f166e18402340daf9c2f6b8aa0e9f1a45694aa91632fd135ab"
+        },
+        {
+          "name": "cnS3-flows.txt",
+          "bytes": 1488,
+          "sha256": "25731e7e152624bd5214917b38d21dd2bec1aec561cce0b743611076ae171c3f"
+        },
+        {
+          "name": "cnS4-flows.txt",
+          "bytes": 947,
+          "sha256": "81f49918862ecf3c32e6f79964f7fde922c9ed708c5ff0edfe0a7b583b396aa8"
+        },
+        {
+          "name": "cnS5-flows.txt",
+          "bytes": 944,
+          "sha256": "45622ee7bb16757c9fe8110dea3a258b6d8bd2225dc0c762394469f534485647"
+        },
+        {
+          "name": "cnS6-flows.txt",
+          "bytes": 947,
+          "sha256": "d2faaf08ec71863e3901b13fea58ddda2fa4228fbbb669bf0021a3dd4177501d"
+        },
+        {
+          "name": "events.jsonl",
+          "bytes": 619,
+          "sha256": "c5948d1abe24dcf9f679e03b354bde368912db030e3f930dd40b96d1271f17b1"
+        },
+        {
+          "name": "h2-server.json",
+          "bytes": 27069,
+          "sha256": "5a949c879daa0bf435bc70e7136031bb07c71e699e0acf4ae86cdf07bd455d24"
+        },
+        {
+          "name": "metadata.json",
+          "bytes": 1128,
+          "sha256": "5a9c177885606e282a127f0ec8d8183148ba65c2e4c2f541b1988ed7ae1f67d3"
+        },
+        {
+          "name": "samples.csv",
+          "bytes": 17043,
+          "sha256": "1c42ff8dc1b5e92eb47e87556d55a7adf9f651e9d86a179a876fee4879ad9b9c"
+        },
+        {
+          "name": "summary.json",
+          "bytes": 1126,
+          "sha256": "6cbe675caf19ec9eec5e5b4e21949bd9da8751ff87c1496579d90f5c613776af"
+        }
+      ]
+    },
+    {
+      "group": "report",
+      "run_id": "20261027T151025Z-7bbacb9c",
+      "scenario": "loss",
+      "method": "rf_without_loss",
+      "topology": "long_diamond",
+      "load_mbps": 4.0,
+      "capacity_mbps": 10.0,
+      "failback": false,
+      "source_sha256": "a7ef80198b39ff67c716687eea6b7b7ce16b05030494e248befac2af109c753e",
+      "model_sha256": "5f3528e6490b50c7fc7e2a33f1556533ac5ebc00356a85f99235ae4458983001",
+      "files": [
+        {
+          "name": "application-iperf.json",
+          "bytes": 48220,
+          "sha256": "71fbfe796d8f2e5cadece9c3f578c91dec7e3d44bff444321187e5565ec3a8d4"
+        },
+        {
+          "name": "b2-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "b4-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "cnS1-flows.txt",
+          "bytes": 964,
+          "sha256": "a6d2c84e6ddb1d3808608b0ce7f72d5eab35d915744285c659a54e29ccb8b3f7"
+        },
+        {
+          "name": "cnS2-flows.txt",
+          "bytes": 948,
+          "sha256": "7aebd97afa8a1df5e036f485c224871d082f3d0d9d18151a6422d82418ab4ffb"
+        },
+        {
+          "name": "cnS3-flows.txt",
+          "bytes": 1488,
+          "sha256": "77d64f58c7d2887fa2dfadd90d7a1376b1f13c958a499bf89b6fa8d536ebeb64"
+        },
+        {
+          "name": "cnS4-flows.txt",
+          "bytes": 931,
+          "sha256": "f1714376207f20a8b159a0a9fd7152065140dbe00ff38c1953b31d915798d5e8"
+        },
+        {
+          "name": "cnS5-flows.txt",
+          "bytes": 948,
+          "sha256": "4d23568a78336b53f648080a08a7b46fac8def9ff3f45393756e129bf0b8f6e7"
+        },
+        {
+          "name": "cnS6-flows.txt",
+          "bytes": 931,
+          "sha256": "846414f8a31a849dc34f85b41ae866cb902b9054496753803e6d5dd4dc749dcd"
+        },
+        {
+          "name": "events.jsonl",
+          "bytes": 460,
+          "sha256": "1e3b5fba773803f2b58f994be4b7d027f56e9abcfb1517978d9b6aadd0216cfc"
+        },
+        {
+          "name": "h2-server.json",
+          "bytes": 27493,
+          "sha256": "d7c90941aa7c42006ae91c42551a85f3ae881321180ce4d8fe2d2333d2a3fe55"
+        },
+        {
+          "name": "metadata.json",
+          "bytes": 1122,
+          "sha256": "0f04d40de118cb971c6fcfdc9df20c883ad8239a82a775bebb30dfd7cfc8b9cb"
+        },
+        {
+          "name": "samples.csv",
+          "bytes": 17096,
+          "sha256": "a8ae73ae21bde9a315853540932fbf7ff5eff2ec55fb45704d9ca72ac3014156"
+        },
+        {
+          "name": "summary.json",
+          "bytes": 1097,
+          "sha256": "472376c1b070138a2b61c8fd46d328aa9fc759c73bc4d594cda7ab713051cd61"
+        }
+      ]
+    },
+    {
+      "group": "report",
+      "run_id": "20261027T151105Z-3f4808d8",
+      "scenario": "loss",
+      "method": "threshold",
+      "topology": "long_diamond",
+      "load_mbps": 4.0,
+      "capacity_mbps": 10.0,
+      "failback": false,
+      "source_sha256": "a7ef80198b39ff67c716687eea6b7b7ce16b05030494e248befac2af109c753e",
+      "model_sha256": null,
+      "files": [
+        {
+          "name": "application-iperf.json",
+          "bytes": 47706,
+          "sha256": "7a1209af7b4bc834e66994984d603ce825d0285951a197d2e111ebfa6df1ba21"
+        },
+        {
+          "name": "b2-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "b4-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "cnS1-flows.txt",
+          "bytes": 964,
+          "sha256": "f865c171181a9a0cab2215491c299e2008edc0553b87b6309a33aceb0b6fcb55"
+        },
+        {
+          "name": "cnS2-flows.txt",
+          "bytes": 944,
+          "sha256": "6c3579f2c6e337d953d11271364ede7a7927676ac6ed629c32a3b31783b13d53"
+        },
+        {
+          "name": "cnS3-flows.txt",
+          "bytes": 1488,
+          "sha256": "9cf90354038e25d3856f96aa0cc592aa9c6428d5d956bb7a4789f276c1a2a5be"
+        },
+        {
+          "name": "cnS4-flows.txt",
+          "bytes": 947,
+          "sha256": "2e9c6803dec4e92c6261b5df1293600fac41a9566c61aafb3afc2e1d20ee89d0"
+        },
+        {
+          "name": "cnS5-flows.txt",
+          "bytes": 944,
+          "sha256": "3bcb0aac365b0626a3623409542c3b92f483578cae28a1c88454ab07da61f96f"
+        },
+        {
+          "name": "cnS6-flows.txt",
+          "bytes": 947,
+          "sha256": "cb6dcd3ec3e110190ad6d7973b0df7d9f647341cd4045cf46543544863d6494d"
+        },
+        {
+          "name": "events.jsonl",
+          "bytes": 620,
+          "sha256": "a649cd415c8b0eadf25a5ef96762f35ad9efd7aa62262b1573a67ef86138dbfd"
+        },
+        {
+          "name": "h2-server.json",
+          "bytes": 27056,
+          "sha256": "360978596a8fab0b23d680ad3178bed9238eccf44723ffb99ec2253b0da9fb6a"
+        },
+        {
+          "name": "metadata.json",
+          "bytes": 988,
+          "sha256": "b4b433f309eb555e2cc344d34a33833c680f956edd909eade7029d8d2939730b"
+        },
+        {
+          "name": "samples.csv",
+          "bytes": 17512,
+          "sha256": "a554aaf4d4611648f70528de33853a77231f53721b0fa74b6f9f1d179a0fe0d9"
+        },
+        {
+          "name": "summary.json",
+          "bytes": 1054,
+          "sha256": "8e90c927e3af1244b34c4f8bdd623b0dc6bc3d30ae19e812de18a9b5322a8b75"
+        }
+      ]
+    },
+    {
+      "group": "report",
+      "run_id": "20261027T151646Z-776f29cf",
+      "scenario": "normal",
+      "method": "rf_without_loss_guard",
+      "topology": "long_diamond",
+      "load_mbps": 4.0,
+      "capacity_mbps": 10.0,
+      "failback": false,
+      "source_sha256": "a7ef80198b39ff67c716687eea6b7b7ce16b05030494e248befac2af109c753e",
+      "model_sha256": "5f3528e6490b50c7fc7e2a33f1556533ac5ebc00356a85f99235ae4458983001",
+      "files": [
+        {
+          "name": "application-iperf.json",
+          "bytes": 47644,
+          "sha256": "1408f4a448e98f800d44644ed3ff645dd576dd86c9c610bcfe4c3a61decd77fa"
+        },
+        {
+          "name": "b2-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "b4-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "cnS1-flows.txt",
+          "bytes": 964,
+          "sha256": "28a1f4e7d9dfbc444c8ba208b481d0a3481932633c67e325fc6f3e61febddfc8"
+        },
+        {
+          "name": "cnS2-flows.txt",
+          "bytes": 948,
+          "sha256": "42d021e30893fef8e7febae67e03d2078c10ef4ba8868549aa7a34f3bcb64023"
+        },
+        {
+          "name": "cnS3-flows.txt",
+          "bytes": 1488,
+          "sha256": "d3009905c4056724eb754ad94fe259440c035caab14f9aae4d93006700e6fb16"
+        },
+        {
+          "name": "cnS4-flows.txt",
+          "bytes": 931,
+          "sha256": "5beb32c9abaf85172bed18c832c71620988b80d43d10a31643c82a34c01e43bb"
+        },
+        {
+          "name": "cnS5-flows.txt",
+          "bytes": 948,
+          "sha256": "85dd3d9c8c4eec3de0d8bc63c4907bc4cc78f8a36775f09bb5432ca3cddb6c0c"
+        },
+        {
+          "name": "cnS6-flows.txt",
+          "bytes": 931,
+          "sha256": "d27604343f5d659b69d8fb7ace3206c2350bdf881997c68bdd8d3b7426cbcb65"
+        },
+        {
+          "name": "events.jsonl",
+          "bytes": 251,
+          "sha256": "d419f9bbaa22c9cc5c9f69e460904eb889f3cd9de36f1503c3be68d415723012"
+        },
+        {
+          "name": "h2-server.json",
+          "bytes": 27003,
+          "sha256": "d6cbdad860d98939fd81bf0893fa5cb2f398aeb5048051ccb1f02d73837a3c58"
+        },
+        {
+          "name": "metadata.json",
+          "bytes": 1130,
+          "sha256": "7c443de80a52e03b2d5a4ec3488d8732ab7f2f85813109e5d69974a550c07271"
+        },
+        {
+          "name": "samples.csv",
+          "bytes": 17198,
+          "sha256": "132978125281f014a2f63aaaebea197a375c59d26e73a544a2d0bd33f67d51af"
+        },
+        {
+          "name": "summary.json",
+          "bytes": 1058,
+          "sha256": "cd7e5252a4336b0c94d1ca414c6c7c7095c856ef5ab07743758e9a7257b7062c"
+        }
+      ]
+    },
+    {
+      "group": "report",
+      "run_id": "20261027T151725Z-f6caa845",
+      "scenario": "link_down",
+      "method": "rf_without_loss_guard",
+      "topology": "long_diamond",
+      "load_mbps": 4.0,
+      "capacity_mbps": 10.0,
+      "failback": false,
+      "source_sha256": "a7ef80198b39ff67c716687eea6b7b7ce16b05030494e248befac2af109c753e",
+      "model_sha256": "5f3528e6490b50c7fc7e2a33f1556533ac5ebc00356a85f99235ae4458983001",
+      "files": [
+        {
+          "name": "application-iperf.json",
+          "bytes": 47725,
+          "sha256": "2fd3e98b491e2c40f53f983790a18ebe6e58b8259e37e4bccf3038fc65f7001f"
+        },
+        {
+          "name": "b2-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "b4-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "cnS1-flows.txt",
+          "bytes": 962,
+          "sha256": "7633c5abe2024a820381cdf91596db5d15fae6c105a60601801730557589e05c"
+        },
+        {
+          "name": "cnS2-flows.txt",
+          "bytes": 942,
+          "sha256": "208828a66c078f7814b406892795b9fd5782a785e3bbe97af9166ede0dce7d8a"
+        },
+        {
+          "name": "cnS3-flows.txt",
+          "bytes": 1484,
+          "sha256": "86235c03081b642bdb3ab003b1e3691b5ae577ed7c4c1d604249f7a8c2bf778f"
+        },
+        {
+          "name": "cnS4-flows.txt",
+          "bytes": 945,
+          "sha256": "059b15702fdc11bbb2220e1b92f4f325fd0f9897827db24f9c1a14ebd0ca7c64"
+        },
+        {
+          "name": "cnS5-flows.txt",
+          "bytes": 942,
+          "sha256": "c4b718d456b5bf4d4bc9e55c41bd5b1a97eb60ceb7e0c71948643a5ecea1cc4e"
+        },
+        {
+          "name": "cnS6-flows.txt",
+          "bytes": 945,
+          "sha256": "014f137c903e5e41ebfa369de16ae3a8d7a3a224a86e63dfbb599290b40862e8"
+        },
+        {
+          "name": "events.jsonl",
+          "bytes": 633,
+          "sha256": "a27bdbad4672b47563107332c7a1a0d1149573db70c06dd5d6422ee83285e1b3"
+        },
+        {
+          "name": "h2-server.json",
+          "bytes": 26996,
+          "sha256": "8f31b5845a300bc8e5840929bec60e9ae53e3b078b91d97c51b95b8cb4ba75fb"
+        },
+        {
+          "name": "metadata.json",
+          "bytes": 1133,
+          "sha256": "7d599d0e02750b57774e3f4e41298dd39b6cc46a4909cc2b0592ac5c266202b8"
+        },
+        {
+          "name": "samples.csv",
+          "bytes": 11494,
+          "sha256": "3838ee206b7f55a8c6148db3ed5a56b41dda35d6dde52929627bc6931bdd44ae"
+        },
+        {
+          "name": "summary.json",
+          "bytes": 1132,
+          "sha256": "e40a8a58a31e2e04c8483efa1743877a20f104dbc03d4834fd95dec399e4eaee"
+        }
+      ]
+    },
+    {
+      "group": "report",
+      "run_id": "20261027T151807Z-9c06ddef",
+      "scenario": "congestion",
+      "method": "rf_without_loss_guard",
+      "topology": "long_diamond",
+      "load_mbps": 4.0,
+      "capacity_mbps": 10.0,
+      "failback": false,
+      "source_sha256": "a7ef80198b39ff67c716687eea6b7b7ce16b05030494e248befac2af109c753e",
+      "model_sha256": "5f3528e6490b50c7fc7e2a33f1556533ac5ebc00356a85f99235ae4458983001",
+      "files": [
+        {
+          "name": "application-iperf.json",
+          "bytes": 47831,
+          "sha256": "d5ff3f15584d351e07d75ccf9774087691a670cc90c96e1d03b8ead7aa1c9962"
+        },
+        {
+          "name": "b2-server.json",
+          "bytes": 14540,
+          "sha256": "f19accd44863664add23fc107b209d2e08fed680f830bb9dd763a5a6621a2f4d"
+        },
+        {
+          "name": "b4-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "background-iperf.json",
+          "bytes": 10140,
+          "sha256": "dd107ec8d479ced53d88b94638b798595449c53a5717b36920ce83055c021838"
+        },
+        {
+          "name": "cnS1-flows.txt",
+          "bytes": 964,
+          "sha256": "3826e7dc3f9fa27de07f4bb40d0c26fe783148c86ad6fe10c4cc5b5baae15af8"
+        },
+        {
+          "name": "cnS2-flows.txt",
+          "bytes": 958,
+          "sha256": "1b31ddba8267ac37e7a6fa8f4b4746cfc739cec90f581849a46cb811b12fb094"
+        },
+        {
+          "name": "cnS3-flows.txt",
+          "bytes": 1502,
+          "sha256": "48b2209fefd7b5e724b7cc04417ee245fe4693817f33fc5f26dccabe8a51cbb8"
+        },
+        {
+          "name": "cnS4-flows.txt",
+          "bytes": 946,
+          "sha256": "fcf049101cd639e688484270a3a34f70127fb0a9d2f2f3eb3752fc5e868bb42b"
+        },
+        {
+          "name": "cnS5-flows.txt",
+          "bytes": 958,
+          "sha256": "f57d64d883347f7368b410b9d77c09e601480a6c11a363ead840f6a51a2def6b"
+        },
+        {
+          "name": "cnS6-flows.txt",
+          "bytes": 946,
+          "sha256": "3d228b7ecca052b846201c0efc5b861cd1f3f07d9faddce0e13eaf49dd4e2ed3"
+        },
+        {
+          "name": "events.jsonl",
+          "bytes": 634,
+          "sha256": "5aa7b7a5f85a628298db98387340b216e647133c2c18becd770b34bd564942d5"
+        },
+        {
+          "name": "h2-server.json",
+          "bytes": 27141,
+          "sha256": "ce616e3e6ea0f6cd3632527564d13f13ea2bb78712185d685c8fb86b390d7309"
+        },
+        {
+          "name": "metadata.json",
+          "bytes": 1134,
+          "sha256": "1a5df06b8b57a179e6189aa9db39d58bbbd69a30e1298e57e3207c0d2117398d"
+        },
+        {
+          "name": "samples.csv",
+          "bytes": 15532,
+          "sha256": "cbd9e0d73c04e01a8647a888569ec9d4fedbcad02a5792ce980ec60f6ed5f119"
+        },
+        {
+          "name": "summary.json",
+          "bytes": 1121,
+          "sha256": "88869f3e986b7fda073c8d8b3f3b813c963b01cef5b3b83be5500a6067d7a69f"
+        }
+      ]
+    },
+    {
+      "group": "report",
+      "run_id": "20261027T151849Z-811520ad",
+      "scenario": "delay",
+      "method": "rf_without_loss_guard",
+      "topology": "long_diamond",
+      "load_mbps": 4.0,
+      "capacity_mbps": 10.0,
+      "failback": false,
+      "source_sha256": "a7ef80198b39ff67c716687eea6b7b7ce16b05030494e248befac2af109c753e",
+      "model_sha256": "5f3528e6490b50c7fc7e2a33f1556533ac5ebc00356a85f99235ae4458983001",
+      "files": [
+        {
+          "name": "application-iperf.json",
+          "bytes": 47803,
+          "sha256": "e5428ca877a1feea98a951a88443c3a2d85858db0f9dfff886aa08a558bbda1f"
+        },
+        {
+          "name": "b2-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "b4-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "cnS1-flows.txt",
+          "bytes": 964,
+          "sha256": "bf228bae6f12fd86d5e00882ae5de591651d7dfc5108fbfd818eb8e6e47c1612"
+        },
+        {
+          "name": "cnS2-flows.txt",
+          "bytes": 944,
+          "sha256": "719fc60fe711851824ecf5c92e71145cc505d5d8e9b6ea976c1e2ab3cf1dd9fa"
+        },
+        {
+          "name": "cnS3-flows.txt",
+          "bytes": 1488,
+          "sha256": "4c3cfadbe52a03cde01ac64356d34c01389302cba764d72227f9f8621a50807b"
+        },
+        {
+          "name": "cnS4-flows.txt",
+          "bytes": 947,
+          "sha256": "df995f98bfc19300b137ada7774f45ef7aebbc2a76eabb84fd6282fb5e182204"
+        },
+        {
+          "name": "cnS5-flows.txt",
+          "bytes": 944,
+          "sha256": "0936a38a8187198dfba9c11c6625db303f9037b576a03010fa7028ba9745d0b0"
+        },
+        {
+          "name": "cnS6-flows.txt",
+          "bytes": 947,
+          "sha256": "df503b53031109b16538dde085f5d343edcb3cfa4319333bb07ab8fda3fa8572"
+        },
+        {
+          "name": "events.jsonl",
+          "bytes": 627,
+          "sha256": "e4ec59dbf1bd4c8b709fbd359f9d722dce731fa75c808c40589c752cb342de08"
+        },
+        {
+          "name": "h2-server.json",
+          "bytes": 27068,
+          "sha256": "275d8840b2647bbf1078e5b49222ef81212bedaa02aecdf7fc80322cc9f43587"
+        },
+        {
+          "name": "metadata.json",
+          "bytes": 1129,
+          "sha256": "64d62d91dee129692c3682260e0753db92867c97a80bacbbb15a3efebe4925e6"
+        },
+        {
+          "name": "samples.csv",
+          "bytes": 17135,
+          "sha256": "18a11950b88dec0b080b4199e916165dce12f9f99d2f02c99dfa43bdfb4a4315"
+        },
+        {
+          "name": "summary.json",
+          "bytes": 1121,
+          "sha256": "f0159b094693ce066494e23b6fc2ef1a9d91c3619b6c9ad4e02344030fda5f85"
+        }
+      ]
+    },
+    {
+      "group": "report",
+      "run_id": "20261027T151928Z-180225f4",
+      "scenario": "both_down",
+      "method": "rf_without_loss_guard",
+      "topology": "long_diamond",
+      "load_mbps": 4.0,
+      "capacity_mbps": 10.0,
+      "failback": false,
+      "source_sha256": "a7ef80198b39ff67c716687eea6b7b7ce16b05030494e248befac2af109c753e",
+      "model_sha256": "5f3528e6490b50c7fc7e2a33f1556533ac5ebc00356a85f99235ae4458983001",
+      "files": [
+        {
+          "name": "application-iperf.json",
+          "bytes": 46993,
+          "sha256": "d21f2f6f8aabc966a0ea0e635acb8290463a44f29c1a277e960f00f3d0b8963d"
+        },
+        {
+          "name": "b2-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "b4-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "cnS1-flows.txt",
+          "bytes": 959,
+          "sha256": "b69269a35b5d7ef847bc866d41530c7a08d9c3eaf7f213dcd346d480027fa9d1"
+        },
+        {
+          "name": "cnS2-flows.txt",
+          "bytes": 945,
+          "sha256": "46ed7a2ac4431759dde6bb962aae64be3ee1711a6e415825d46168d91fbdde86"
+        },
+        {
+          "name": "cnS3-flows.txt",
+          "bytes": 1478,
+          "sha256": "50dbdfb13e5dbd6a6cfa2735cab37fc3d816ec0f6305c9406c079373617980e1"
+        },
+        {
+          "name": "cnS4-flows.txt",
+          "bytes": 929,
+          "sha256": "f63221e55d9f0dae2def450ad9096cb00f5952f195fbf4cc619830c40846cc16"
+        },
+        {
+          "name": "cnS5-flows.txt",
+          "bytes": 945,
+          "sha256": "ae2d05d542628801a4adc1a741b72f9d6b5bbabb19628c9f792506ee2702abad"
+        },
+        {
+          "name": "cnS6-flows.txt",
+          "bytes": 929,
+          "sha256": "8f8457ef6f3add638da8263fe581a1dcb7d6b5c105b097c9395f50b230ca9f3c"
+        },
+        {
+          "name": "events.jsonl",
+          "bytes": 468,
+          "sha256": "f3b25779283482a9a8bc3e841f3d84b3506e6fda350a71e30f312af57dfee8a0"
+        },
+        {
+          "name": "h2-server.json",
+          "bytes": 26234,
+          "sha256": "1631b08011976a03c41e318573e24b212c0696a8c6df2a9863b01f5b97dcea1a"
+        },
+        {
+          "name": "metadata.json",
+          "bytes": 1133,
+          "sha256": "8900c1eb146e6ac5845a1743b3849f3c200c7d54efb5867ff8dc811aaa25a9ea"
+        },
+        {
+          "name": "samples.csv",
+          "bytes": 11547,
+          "sha256": "402fe418156e7f6116a07ec6959edccc0669e06fb23b5f436f4e5b995ca273fc"
+        },
+        {
+          "name": "summary.json",
+          "bytes": 1093,
+          "sha256": "88d7064771488ae19c3904939b59d954d5ddd3b5247be4e22629dcb12824c5b0"
+        }
+      ]
+    },
+    {
+      "group": "failback",
+      "run_id": "20261028T031343Z-9deb6c3e",
+      "scenario": "link_down",
+      "method": "rf_without_loss_guard",
+      "topology": "long_diamond",
+      "load_mbps": 4.0,
+      "capacity_mbps": 10.0,
+      "failback": true,
+      "source_sha256": "8b31fb1a3743993e871e3f0caf76ea110a32c35fa992f15a10b62d1b1e4a0ad7",
+      "model_sha256": "5f3528e6490b50c7fc7e2a33f1556533ac5ebc00356a85f99235ae4458983001",
+      "files": [
+        {
+          "name": "application-iperf.json",
+          "bytes": 47770,
+          "sha256": "d54dfa47c082695d4c9421dd72ee3bd09ab961edbd606c77b644182016f4c564"
+        },
+        {
+          "name": "b2-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "b4-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "cnS1-flows.txt",
+          "bytes": 962,
+          "sha256": "d73b39f1c3e144719aa5a45aa37b709c934b2d7c0bad381e73cf6befd1a3b969"
+        },
+        {
+          "name": "cnS2-flows.txt",
+          "bytes": 942,
+          "sha256": "aadba47ae80f37be93eebfe995fd2a8fe70f70dad397c78cd41f78527ff9e3c1"
+        },
+        {
+          "name": "cnS3-flows.txt",
+          "bytes": 1484,
+          "sha256": "225fb68ff6f4ac086fc5da0ce2863ee7eb806ab549c985f1e48a9dd819b002b3"
+        },
+        {
+          "name": "cnS4-flows.txt",
+          "bytes": 945,
+          "sha256": "252ecdd86a71acd988ac61b3bfcaf871f9437cfb4ba2b97be7c84c7a16a19bf5"
+        },
+        {
+          "name": "cnS5-flows.txt",
+          "bytes": 942,
+          "sha256": "78a43e046b478bb2dd3a0eeedf0b8d56b039fa994df3088407447c19ead6de65"
+        },
+        {
+          "name": "cnS6-flows.txt",
+          "bytes": 945,
+          "sha256": "f8041eac6abbbece7d892bb78068bc70be2206b0b99c814e3b17267f63935028"
+        },
+        {
+          "name": "events.jsonl",
+          "bytes": 799,
+          "sha256": "d08b5642ad2a098fc0f476efa74b5c354b90738f1db74b0d80c2478a0a7d2a16"
+        },
+        {
+          "name": "h2-server.json",
+          "bytes": 27010,
+          "sha256": "e5ea61e76d8f287fea9a8ddb564e3aa3bab6afc8101327d4158cab75afb63cbb"
+        },
+        {
+          "name": "metadata.json",
+          "bytes": 1213,
+          "sha256": "f3be1ca61c13fc64470ffa3c3d0cdadb47e0fdab065a4798e6295709abe82524"
+        },
+        {
+          "name": "samples.csv",
+          "bytes": 11678,
+          "sha256": "b78aba6df24327f701e7c95583b3f991a3b83ae9d1babaa7e5a4eab83b213c94"
+        },
+        {
+          "name": "summary.json",
+          "bytes": 1338,
+          "sha256": "2be4f116fa441f6edc22d2a3aba4b0fee2d69c0edc10e53352537735fb7ec132"
+        }
+      ]
+    },
+    {
+      "group": "failback",
+      "run_id": "20261028T041720Z-9547e8cb",
+      "scenario": "link_down",
+      "method": "rf_without_loss_guard",
+      "topology": "long_diamond",
+      "load_mbps": 4.0,
+      "capacity_mbps": 10.0,
+      "failback": true,
+      "source_sha256": "8b31fb1a3743993e871e3f0caf76ea110a32c35fa992f15a10b62d1b1e4a0ad7",
+      "model_sha256": "5f3528e6490b50c7fc7e2a33f1556533ac5ebc00356a85f99235ae4458983001",
+      "files": [
+        {
+          "name": "application-iperf.json",
+          "bytes": 47684,
+          "sha256": "097058dd4cec1c95d62f1d2f93ede9e88ee950b236b0f34f5e085826fa9aee48"
+        },
+        {
+          "name": "b2-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "b4-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "cnS1-flows.txt",
+          "bytes": 962,
+          "sha256": "4c0d8df67fa58492e3b2fc1097169d2c824c9285d75e1af6bf4ca80658564bc7"
+        },
+        {
+          "name": "cnS2-flows.txt",
+          "bytes": 942,
+          "sha256": "46591e5c22c6db8337a63d55d928b57109d3fa32ad2de72ff7789b666b43aba7"
+        },
+        {
+          "name": "cnS3-flows.txt",
+          "bytes": 1484,
+          "sha256": "c964089380b91e3630b16e195f126d0e02813b5c9c195e285588c0a3e900dec2"
+        },
+        {
+          "name": "cnS4-flows.txt",
+          "bytes": 945,
+          "sha256": "284cc1101d969c1810d07454d58fffe94fc98b1caedb0ee672cd1f81eb1cc0f6"
+        },
+        {
+          "name": "cnS5-flows.txt",
+          "bytes": 942,
+          "sha256": "2c027ddeb0fd526eaf2ce4fa07737c953d4bff757b1a262f1bf9871c3967a63f"
+        },
+        {
+          "name": "cnS6-flows.txt",
+          "bytes": 945,
+          "sha256": "bd9e93bf5d32381493d49eb3cdabdeeabd5aa1692a2c55f826d7041555ff3639"
+        },
+        {
+          "name": "events.jsonl",
+          "bytes": 787,
+          "sha256": "d1e573af3c4e7d23b88fca01713cd9de66f44af7a6ab9e2889d83dc99944f84a"
+        },
+        {
+          "name": "h2-server.json",
+          "bytes": 26959,
+          "sha256": "65edd3ca0b3449729c80968a7dc98970d94ca021a5879b435e07149757e7cc14"
+        },
+        {
+          "name": "metadata.json",
+          "bytes": 1215,
+          "sha256": "b6b1160dac3b6d00277f0c574a20ffbe52a214d0f4a32151494fe20cf236b062"
+        },
+        {
+          "name": "samples.csv",
+          "bytes": 11691,
+          "sha256": "cb7535220bb3b9a37023d8cb802d1c876fa1ba572b4a02498bd868638452e218"
+        },
+        {
+          "name": "summary.json",
+          "bytes": 1340,
+          "sha256": "44548f4a9413b12781003c369bd9fbd1a4f9f23475366f232cd54d6fb8da9d53"
+        }
+      ]
+    },
+    {
+      "group": "failback",
+      "run_id": "20261028T041814Z-cf7bae53",
+      "scenario": "loss",
+      "method": "rf_without_loss_guard",
+      "topology": "long_diamond",
+      "load_mbps": 4.0,
+      "capacity_mbps": 10.0,
+      "failback": true,
+      "source_sha256": "8b31fb1a3743993e871e3f0caf76ea110a32c35fa992f15a10b62d1b1e4a0ad7",
+      "model_sha256": "5f3528e6490b50c7fc7e2a33f1556533ac5ebc00356a85f99235ae4458983001",
+      "files": [
+        {
+          "name": "application-iperf.json",
+          "bytes": 47777,
+          "sha256": "cbe9a1a6f2be21cdb8b73924adf75011844d75a4c7d240ac3ddd29fbfb32983b"
+        },
+        {
+          "name": "b2-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "b4-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "cnS1-flows.txt",
+          "bytes": 964,
+          "sha256": "16ad0f753297fe9df623a60da68246c45c950d56229fdffafc2cbcb694fc5f22"
+        },
+        {
+          "name": "cnS2-flows.txt",
+          "bytes": 944,
+          "sha256": "c5d3e70bcf551f9bdbb72dfd43789c320356b3e1c2a64a5e5d8fb405a34a0057"
+        },
+        {
+          "name": "cnS3-flows.txt",
+          "bytes": 1488,
+          "sha256": "464402095595baef73d5c0288ee82004f681126a8b0afa0836fe336da7c624bb"
+        },
+        {
+          "name": "cnS4-flows.txt",
+          "bytes": 946,
+          "sha256": "588290e07fecd6fdfbcf7130b7114ca093594ff2dac11d654763d5e6bed326a5"
+        },
+        {
+          "name": "cnS5-flows.txt",
+          "bytes": 944,
+          "sha256": "cd69a1c1e09586b188f85c2d4013c2d0d9cd4e227310d4b6f3deb3135508fe71"
+        },
+        {
+          "name": "cnS6-flows.txt",
+          "bytes": 946,
+          "sha256": "95b28c3105494955a00b2719a71cfc94fb860240d2d9a6d0c2b12eb2eb9f6388"
+        },
+        {
+          "name": "events.jsonl",
+          "bytes": 792,
+          "sha256": "dd19b378ee7e1f7ed90668ffb1eda7e2592d61269da4c18c107b0d1ac5e587f3"
+        },
+        {
+          "name": "h2-server.json",
+          "bytes": 27079,
+          "sha256": "77de433e5c454d914136337236ec6c32a8a6318a82e0d3e0dfd07f1431c77e1c"
+        },
+        {
+          "name": "metadata.json",
+          "bytes": 1210,
+          "sha256": "f429280a3c9fad60de36341ca0c20dc5ff4a6045b8a469b8028e359c8c52bf5b"
+        },
+        {
+          "name": "samples.csv",
+          "bytes": 16834,
+          "sha256": "2d99614bd49e9b0e6063c0a77babd282dba04ef030b82909c89cf6ddbc697984"
+        },
+        {
+          "name": "summary.json",
+          "bytes": 1314,
+          "sha256": "f7264d133e511815830e744505d19b98e39d3cbe2c65564f9adb950db2e2aab0"
+        }
+      ]
+    },
+    {
+      "group": "additional",
+      "run_id": "20261027T191045Z-3101b8ae",
+      "scenario": "normal",
+      "method": "rf_without_loss_guard",
+      "topology": "long_diamond",
+      "load_mbps": 10.0,
+      "capacity_mbps": 10.0,
+      "failback": false,
+      "source_sha256": "2c271d99b00bf81d0317d4be91531fe165a1ee9f04e1564c80a2d9d6505825c1",
+      "model_sha256": "5f3528e6490b50c7fc7e2a33f1556533ac5ebc00356a85f99235ae4458983001",
+      "files": [
+        {
+          "name": "application-iperf.json",
+          "bytes": 48382,
+          "sha256": "4b77ffe880eeddd21cc799932f191c1721de12fc66c3f01710e895cb1f93681f"
+        },
+        {
+          "name": "b2-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "b4-server.json",
+          "bytes": 333,
+          "sha256": "6ad7256d504d808f69f9f6869fa78c592d34fa4b1f0230f5d11e4ad3a00ccdde"
+        },
+        {
+          "name": "cnS1-flows.txt",
+          "bytes": 964,
+          "sha256": "6775c7bcac804584c27e4723c719e86733cf4007b6556e76062014225a7d240b"
+        },
+        {
+          "name": "cnS2-flows.txt",
+          "bytes": 948,
+          "sha256": "2c76a71ceef83d6a7c577fa8e62451cff69d40bcf3651348ee849a27c1d2c6bc"
+        },
+        {
+          "name": "cnS3-flows.txt",
+          "bytes": 1488,
+          "sha256": "47351c17397fc0b94c9aa991015eed7cccc41ec4d1cae8b661cc59bfbedc05e2"
+        },
+        {
+          "name": "cnS4-flows.txt",
+          "bytes": 946,
+          "sha256": "6e01190d7033d3e11c9ab1290cabb92c20043425e2a6e3b7e5abbc48dc54d988"
+        },
+        {
+          "name": "cnS5-flows.txt",
+          "bytes": 948,
+          "sha256": "116b98920b1ca08fbf1dab1353968a9c175f4400ef128f405a2d10d88cad4904"
+        },
+        {
+          "name": "cnS6-flows.txt",
+          "bytes": 946,
+          "sha256": "9bd0f08c6e3c52ebba78d17a820329d4e7c9b7bb2def9415d365dd9716f26180"
+        },
+        {
+          "name": "events.jsonl",
+          "bytes": 1254,
+          "sha256": "edf100726dc67e1931958ff6676fc1a3388fc21f3fd1a9f51399e443c38f2f98"
+        },
+        {
+          "name": "h2-server.json",
+          "bytes": 27612,
+          "sha256": "49fac2dd11852c1f72e3dd7cdb44072ec41211477a96ee579111588a54ebf645"
+        },
+        {
+          "name": "metadata.json",
+          "bytes": 1131,
+          "sha256": "e97c9e7252e234904821bea47af7f46a171825a0ab12898996b3099130cf6af9"
+        },
+        {
+          "name": "samples.csv",
+          "bytes": 17344,
+          "sha256": "5b69e50931e65c491ea5f5ea0725023e39f04c92211c3da93d061c63ac70d181"
+        },
+        {
+          "name": "summary.json",
+          "bytes": 1090,
+          "sha256": "d0d31aab7434617ff30a15e956f08a6e05f12c97171885dbfa0a297d325cbc9e"
+        }
+      ]
+    }
+  ]
+}

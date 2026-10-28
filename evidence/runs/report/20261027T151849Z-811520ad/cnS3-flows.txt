@@ -1,0 +1,12 @@
+OFPST_FLOW reply (OF1.3) (xid=0x2):
+ cookie=0x0, duration=36.584s, table=0, n_packets=217, n_bytes=21266, priority=200,ip,nw_src=10.77.0.1,nw_dst=10.77.0.102 actions=output:1
+ cookie=0x0, duration=36.580s, table=0, n_packets=217, n_bytes=21266, priority=200,ip,nw_src=10.77.0.102,nw_dst=10.77.0.1 actions=output:4
+ cookie=0x0, duration=36.557s, table=0, n_packets=12620, n_bytes=18529513, priority=100,ip,nw_src=10.77.0.1,nw_dst=10.77.0.2 actions=output:1
+ cookie=0x0, duration=36.531s, table=0, n_packets=185, n_bytes=18130, priority=200,ip,nw_src=10.77.0.1,nw_dst=10.77.0.103 actions=output:1
+ cookie=0x0, duration=36.529s, table=0, n_packets=185, n_bytes=18130, priority=200,ip,nw_src=10.77.0.103,nw_dst=10.77.0.1 actions=output:5
+ cookie=0x0, duration=36.514s, table=0, n_packets=0, n_bytes=0, priority=100,ip,nw_src=10.77.0.3,nw_dst=10.77.0.4 actions=output:2
+ cookie=0x0, duration=36.512s, table=0, n_packets=0, n_bytes=0, priority=100,ip,nw_src=10.77.0.4,nw_dst=10.77.0.3 actions=output:4
+ cookie=0x0, duration=36.495s, table=0, n_packets=0, n_bytes=0, priority=100,ip,nw_src=10.77.0.5,nw_dst=10.77.0.6 actions=output:3
+ cookie=0x0, duration=36.492s, table=0, n_packets=0, n_bytes=0, priority=100,ip,nw_src=10.77.0.6,nw_dst=10.77.0.5 actions=output:5
+ cookie=0x0, duration=36.553s, table=0, n_packets=197, n_bytes=19042, priority=100,ip,nw_src=10.77.0.2,nw_dst=10.77.0.1 actions=output:5
+ cookie=0x0, duration=36.621s, table=0, n_packets=76, n_bytes=16156, priority=0 actions=drop

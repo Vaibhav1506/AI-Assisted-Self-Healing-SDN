@@ -1,0 +1,35 @@
+{
+  "checked_at_utc": "2026-10-28T08:59:26.549617+00:00",
+  "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "source_sha256": "8b31fb1a3743993e871e3f0caf76ea110a32c35fa992f15a10b62d1b1e4a0ad7",
+  "model_sha256": "5f3528e6490b50c7fc7e2a33f1556533ac5ebc00356a85f99235ae4458983001",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.5.2",
+    "threadpoolctl": "3.7.0"
+  },
+  "checks": [
+    {
+      "name": "unit-tests",
+      "command": "python3 -B -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "output": "unit-tests.txt"
+    },
+    {
+      "name": "doctor",
+      "command": "python3 -B main.py doctor",
+      "exit_code": 0,
+      "output": "doctor.txt"
+    },
+    {
+      "name": "evidence-restore",
+      "exit_code": 0,
+      "output": "restore-check.txt"
+    }
+  ],
+  "live_smoke_rerun": false,
+  "live_smoke_note": "sudo requires interactive authentication; archived measured runs are included separately."
+}

@@ -1,0 +1,3 @@
+Restored all 12 recordings (169 files) into a temporary directory.
+Repeated restore copied zero files.
+A modified local record was rejected without overwriting it.

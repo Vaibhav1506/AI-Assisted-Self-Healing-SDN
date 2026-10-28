@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A local laboratory for observing and comparing self-healing software-defined networks.">
+  <meta name="dashboard-reset-at" content="2026-10-27T17:32:40.763984+00:00">
+  <meta name="theme-color" content="#ffffff">
+  <title>SDN Laboratory</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="SDN Laboratory home">SDN Laboratory</a>
+    <nav class="nav-tabs" aria-label="Main navigation">
+      <button class="nav-tab active" data-page="experiment" aria-current="page">Experiment</button>
+      <button class="nav-tab" data-page="history">Run history <span id="history-count">0</span></button>
+      <button class="nav-tab" data-page="compare">Compare methods</button>
+    </nav>
+    <div class="connection"><i class="dot"></i><span id="connection-text">Connecting</span></div>
+  </header>
+  <main>
+    <div class="page-heading">
+      <div><h1 id="page-title">Experiment</h1><p id="page-description">Select a topology, fault scenario and detection method.</p></div>
+    </div>
+
+    <section id="page-experiment" class="page">
+      <div class="lab-layout">
+        <aside class="panel config-panel">
+          <div class="panel-heading"><h2>Settings</h2></div>
+          <form id="config-form">
+            <fieldset><legend>Network topology</legend><div class="topology-options">
+              <label class="topology-option"><input type="radio" name="topology" value="diamond"><span><strong>4 switches</strong><small>Diamond</small></span></label>
+              <label class="topology-option"><input type="radio" name="topology" value="long_diamond" checked><span><strong>6 switches</strong><small>Extended diamond</small></span></label>
+            </div></fieldset>
+            <label class="field-label" for="scenario">Fault scenario</label><select id="scenario" name="scenario"><option value="normal">Normal operation</option><option value="link_down">Link failure</option><option value="loss" selected>Packet loss</option><option value="congestion">Congestion</option><option value="delay">Increased delay</option><option value="both_down">Both paths down</option></select>
+            <p class="field-help" id="scenario-help">Inject 20% loss on the primary branch.</p>
+            <label class="field-label" for="method">Detection method</label><select id="method" name="method"><option value="rf_without_loss_guard">Random Forest + loss guard</option><option value="rf_without_loss">Random Forest only</option><option value="threshold">Fixed thresholds</option></select>
+            <p class="field-help" id="method-help">Classifier with a 15% measured-loss safeguard.</p>
+            <div class="traffic-settings">
+              <div class="load-label"><label class="field-label" for="load">Application traffic</label><span><input id="load" name="load" type="number" min="0.1" max="100" step="0.1" value="4" required> Mbps</span></div>
+              <div class="load-label"><label class="field-label" for="capacity">Link capacity</label><span><input id="capacity" name="capacity" type="number" min="0.1" max="100" step="0.1" value="10" required> Mbps</span></div>
+            </div>
+            <div class="failback-settings">
+              <label class="field-label" for="failback">Return to primary</label><select id="failback" name="failback"><option value="true">Automatic after stable recovery</option><option value="false">Stay on backup while healthy</option></select>
+              <div class="load-label"><label class="field-label" for="failback-delay">Stability wait</label><span><input id="failback-delay" type="number" min="0" step="0.5" value="5" required> s</span></div>
+              <div class="load-label"><label class="field-label" for="failback-confirmations">Healthy observations</label><span><input id="failback-confirmations" type="number" min="1" step="1" value="3" required></span></div>
+              <p class="field-help">Both requirements must be met. Any unhealthy primary observation restarts the wait.</p>
+            </div>
+            <div class="config-facts"><span>Duration<strong>36 seconds</strong></span></div>
+            <button id="run-button" class="button primary full" type="submit">Run experiment</button>
+            <button id="stop-button" class="button danger full hidden" type="button">Stop experiment</button>
+          </form>
+          <div id="access-note" class="access-note"><p>Viewing saved results.<button class="text-button" id="live-help-button">Enable live experiments</button></p></div>
+          <div id="live-note" class="access-note hidden"><i class="dot"></i><p>Live controls enabled.<br>Experiments run one at a time.</p></div>
+        </aside>
+
+        <div class="lab-main">
+          <section class="panel topology-panel">
+            <div class="network-heading"><h2 id="network-title">Six-switch topology</h2><span id="source-badge" class="status-pill">Ready</span></div>
+            <div class="network-facts"><span><i class="dot dark"></i><span id="active-route-label">Primary route</span></span><span id="controller-label">Awaiting experiment</span></div>
+            <div class="topology-canvas"><svg id="network-svg" viewBox="0 0 900 340" role="img" aria-label="Network topology"></svg></div>
+            <div id="network-telemetry" class="network-telemetry"></div>
+            <div class="network-footer"><div class="legend"><span><i class="line-key active-key"></i>Active route</span><span><i class="line-key"></i>Standby</span><span><i class="line-key fault-key"></i>Impaired link</span></div><span id="network-status">Choose a configuration to begin</span></div>
+            <div class="replay-bar"><button id="play-button" class="icon-button" aria-label="Replay recorded experiment" disabled>▶</button><label class="sr-only" for="replay-range">Experiment time</label><input id="replay-range" type="range" min="0" max="36" step="0.001" value="0" disabled><span class="timecode"><span id="elapsed">00.0</span> <span>/ <span id="duration">36.0</span>s</span></span><button id="speed-button" class="speed-button" aria-label="Change playback speed">1×</button></div>
+          </section>
+          <div class="metrics-grid">
+            <article class="panel metric"><span>Verified recovery <span title="Two healthy application probe windows after switching, while the fault persists.">ⓘ</span></span><strong id="metric-recovery">—<small>s</small></strong><p id="recovery-caption">Waiting for evidence</p></article>
+            <article class="panel metric"><span>Route change time</span><strong id="metric-switch">—<small>s</small></strong><p>From actual fault onset</p></article>
+            <article class="panel metric"><span>Receiver throughput</span><strong id="metric-throughput">—<small>Mbps</small></strong><p>Whole-run UDP average</p></article>
+            <article class="panel metric"><span>Application loss</span><strong id="metric-loss">—<small>%</small></strong><p>Whole-run UDP packet loss</p></article>
+            <article class="panel metric"><span>Return to primary</span><strong id="metric-failback">—<small>s</small></strong><p id="failback-caption">From fault clearance</p></article>
+          </div>
+          <section class="panel chart-panel"><div class="panel-heading"><h2>Path telemetry</h2><div class="chart-tabs" role="group" aria-label="Telemetry metric"><button class="active" data-chart="loss">Loss</button><button data-chart="rtt">Latency</button><button data-chart="util">Utilization</button></div></div><div class="chart-legend"><span><i class="dot accent"></i>Primary</span><span><i class="dot dark"></i>Backup</span><span><i class="shade-key"></i>Fault window</span><span id="chart-unit">LOSS / %</span></div><div id="chart" class="chart" aria-live="off"></div><p class="chart-note" id="chart-note">Path probes are separate from receiver-side application statistics.</p></section>
+        </div>
+      </div>
+      <div class="lower-grid">
+        <section class="panel timeline-panel"><div class="panel-heading"><h2>Event timeline</h2><span id="timeline-caption" class="step-label">Recorded events</span></div><div id="timeline" class="timeline"><p class="empty-copy">Select a recorded run or start an experiment.</p></div></section>
+        <section class="panel outcome-panel"><div class="panel-heading"><h2>Experiment outcome</h2><span id="run-status" class="step-label">No run selected</span></div><div id="outcome-content" class="outcome-content"></div><div id="evidence-links" class="evidence-links"></div></section>
+      </div>
+      <div class="selected-run"><span id="selected-run-label">No experiment selected</span><button id="view-history" class="text-button">View run history</button></div>
+    </section>
+
+    <section id="page-history" class="page hidden"><div class="panel history-panel"><div class="table-toolbar"><div><h2>Recorded experiments</h2><p>Saved measurements and event logs.</p></div><div class="table-filters"><label class="sr-only" for="history-scenario">Filter by scenario</label><select id="history-scenario"><option value="all">All scenarios</option></select><label class="sr-only" for="history-topology">Filter by topology</label><select id="history-topology"><option value="all">Both topologies</option><option value="long_diamond">6 switches</option><option value="diamond">4 switches</option></select><button id="refresh-history" class="button secondary">Refresh</button></div></div><div class="table-scroll"><table><thead><tr><th>Recorded</th><th>Scenario</th><th>Method</th><th>Topology</th><th>Recovery</th><th>Throughput</th><th></th></tr></thead><tbody id="history-body"></tbody></table></div><p id="history-empty" class="empty-copy hidden">No experiments match these filters.</p></div></section>
+
+    <section id="page-compare" class="page hidden"><div class="compare-layout"><aside class="panel compare-controls"><h2>Comparison settings</h2><p>Use the same topology, scenario, traffic load, link capacity and return policy for each method.</p><label class="field-label" for="compare-scenario">Scenario</label><select id="compare-scenario"></select><label class="field-label" for="compare-topology">Topology</label><select id="compare-topology"><option value="long_diamond">6-switch extended diamond</option><option value="diamond">4-switch diamond</option></select><label class="field-label" for="compare-load">Traffic load · Mbps</label><input id="compare-load" type="number" min="0.1" max="100" step="0.1" value="4"><label class="field-label" for="compare-capacity">Link capacity · Mbps</label><input id="compare-capacity" type="number" min="0.1" max="100" step="0.1" value="10">
+      <label class="field-label" for="compare-failback">Return to primary</label><select id="compare-failback"><option value="true">Automatic after stable recovery</option><option value="false">Stay on backup while healthy</option></select>
+      <label class="field-label" for="compare-failback-delay">Stability wait · seconds</label><input id="compare-failback-delay" type="number" min="0" step="0.5" value="5">
+      <label class="field-label" for="compare-failback-confirmations">Healthy observations</label><input id="compare-failback-confirmations" type="number" min="1" step="1" value="3">
+      <button id="compare-run" class="button primary full">Run all three methods</button><p class="field-help">Runs sequentially. About two minutes plus network setup and cleanup.</p><div id="compare-progress" class="compare-progress hidden"></div></aside><div class="compare-main"><div id="comparison-cards" class="comparison-cards"></div><div class="panel compare-table-panel"><div class="panel-heading"><h2>Results by method</h2><span class="step-label">Latest matching runs</span></div><div class="table-scroll"><table class="comparison-table"><thead id="comparison-head"></thead><tbody id="comparison-body"></tbody></table></div><p class="comparison-note">Each column is one measured run. Repeat trials before drawing conclusions about consistent performance.</p></div></div></div></section>
+  </main>
+  <footer><span>Self-healing SDN</span><span>Mininet · Open vSwitch · OpenFlow 1.3</span></footer>
+  <div id="toast" class="toast hidden" role="status"></div>
+  <dialog id="live-dialog"><div class="dialog-top"><button id="close-dialog" class="icon-button" aria-label="Close">✕</button></div><h2>Enable live experiments</h2><p>Mininet needs administrator access to create virtual switches and links. Stop the dashboard server with Ctrl+C, then run this from the project folder:</p><pre><code>sudo python3 dashboard/server.py</code></pre><button id="copy-command" class="button secondary">Copy launch command</button><p class="field-help">Refresh this page after restarting. The server stays on this computer at 127.0.0.1:8765.</p></dialog>
+</body>
+</html>
