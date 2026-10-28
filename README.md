@@ -64,8 +64,8 @@ See [INSTALLATION.md](docs/INSTALLATION.md) for compatibility notes and
 troubleshooting. Run these commands from the cloned repository directory:
 
 ```bash
-git clone https://github.com/Vaibhav1506/L13_L14_Team5.git
-cd L13_L14_Team5
+git clone https://github.com/Vaibhav1506/AI-Assisted-Self-Healing-SDN.git
+cd AI-Assisted-Self-Healing-SDN
 
 # Debian/Ubuntu-style Linux, with the packages available in its repositories.
 sudo apt-get update
