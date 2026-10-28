@@ -1,0 +1,13 @@
+Verified committed revision f566fce from a temporary clean git clone.
+The clone excluded the original local .venv, .runtime, builds and archives.
+
+python3 -B -m unittest discover -s tests -v: 18 tests passed.
+python3 -B tools/restore_evidence.py: 12 recordings, 169 files restored.
+python3 -B reset_dashboard.py --restore: display cutoff cleared in temporary clone.
+python3 -B dashboard/server.py --port <temporary loopback port>: started without root.
+GET /api/runs: returned all 12 recordings.
+GET /: HTTP 200, SDN Laboratory HTML present.
+
+The test server was stopped and the temporary clone removed afterwards.
+No live Mininet network was started by this check. Fresh installation of live
+networking dependencies on another machine remains unverified.

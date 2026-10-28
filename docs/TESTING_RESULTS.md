@@ -68,6 +68,13 @@ environment, package versions, controller hash and check scope. A fresh live
 smoke test was not rerun during packaging because sudo requires interactive
 authentication. Run `sudo python3 main.py smoke` before evaluation.
 
+A separate clean clone of committed revision `f566fce` passed all 18 tests,
+restored all 12 included recordings, and served the dashboard and history API
+without the local `.venv` or administrator access. See
+[clean-clone.txt](../evidence/verification/clean-clone.txt). This verifies the
+saved-results workflow; it does not verify a fresh install of the live-network
+dependencies on another machine.
+
 ## Raw evidence format
 
 | File | Meaning |
