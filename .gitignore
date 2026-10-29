@@ -18,6 +18,8 @@ Archive/
 
 # Generated bundles and superseded submission names
 documents/*.zip
+!documents/L13_L14_Team5_SourceCode.zip
+!documents/L13_L14_Team5_Screenshots.zip
 documents/Self_Healing_*
 
 # Local settings and credentials

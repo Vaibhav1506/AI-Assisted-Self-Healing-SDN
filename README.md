@@ -127,5 +127,9 @@ python3 -B -m unittest discover -s tests -v
 | `tools/` | Saved-evidence restore utility |
 | `documents/` | [Report PDF](documents/L13_L14_Team5_Report.pdf) and [presentation PDF](documents/L13_L14_Team5_PPT.pdf) |
 
+Submission ZIPs in `documents/`: `L13_L14_Team5_SourceCode.zip` (complete project)
+and `L13_L14_Team5_Screenshots.zip` (four dashboard captures). Extract the source
+ZIP and run the setup commands from its `L13_L14_Team5/` folder.
+
 New runs are saved under `.runtime/`. This directory and the local `.venv/`
 environment are ignored by Git.
