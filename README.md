@@ -70,6 +70,19 @@ sudo python3 main.py smoke                # Live failover and failback check
 python3 main.py show                      # Show the latest saved result
 ```
 
+## Expected results
+
+- **Healthy network:** under the default load, traffic stays on the primary path.
+- **Primary-path fault:** traffic moves to a healthy backup; two healthy application
+  probe windows verify recovery after rerouting.
+- **Primary restored:** with automatic return enabled, traffic returns after five
+  seconds of sustained primary health and at least three healthy observations.
+- **Both paths down:** the controller reports no healthy alternative during the
+  outage; recovery requires an available healthy path.
+
+Measured timings are available in [recorded results](evidence/results.csv) and
+vary between runs.
+
 ## Replay included recordings
 
 To view the 12 saved experiments without administrator access:
@@ -83,6 +96,18 @@ python3 dashboard/server.py
 Open **Run history** in the dashboard. This mode supports recorded playback;
 starting a new experiment requires the live setup above.
 
+## Dashboard screenshots
+
+These recorded-playback captures use [run `20261028T041720Z-9547e8cb`](evidence/runs/failback/20261028T041720Z-9547e8cb/summary.json):
+six switches, RF + loss guard, 4 Mbps traffic and 10 Mbps links.
+
+| Screenshot | Recorded stage |
+| --- | --- |
+| [Healthy primary](evidence/screenshots/01-healthy-primary.jpg) | At 8 s: primary selected, zero probe loss |
+| [Fault and failover](evidence/screenshots/02-fault-and-failover.jpg) | At 13 s: link failure detected, backup selected |
+| [Backup recovery](evidence/screenshots/03-backup-recovery.jpg) | At 22 s: healthy application probes and verified recovery |
+| [Primary restored](evidence/screenshots/04-primary-restored-timeline.jpg) | Complete timeline, including fault clearance and automatic return |
+
 ## Tests and project files
 
 Run the 18 policy, configuration and metric checks without root or Mininet:
@@ -95,10 +120,10 @@ python3 -B -m unittest discover -s tests -v
 | --- | --- |
 | `src/selfheal/` | Controller, topology, telemetry and fitted model |
 | `dashboard/` | Local Python server and browser interface |
-| `evidence/` | Original recordings, checksums and [results](evidence/results.csv) |
+| `evidence/` | Original recordings, screenshots, checksums and [results](evidence/results.csv) |
 | `tests/` | Automated checks |
 | `tools/` | Saved-evidence restore utility |
-| `documents/` | [Report PDF](documents/L13_L14_Team5_Report.pdf) and [presentation](documents/L13_L14_Team5_PPT.pptx) |
+| `documents/` | [Report PDF](documents/L13_L14_Team5_Report_24BCE2052_Vaibhav%20Bakshi.pdf) and [presentation PDF](documents/L13_L14_Team5_PPT_24BCE2052_Vaibhav%20Bakshi.pdf) |
 
 New runs are saved under `.runtime/`. This directory and the local `.venv/`
 environment are ignored by Git.
