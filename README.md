@@ -118,18 +118,20 @@ Run the 18 policy, configuration and metric checks without root or Mininet:
 python3 -B -m unittest discover -s tests -v
 ```
 
-| Folder | Contents |
+| Location | Contents |
 | --- | --- |
 | `src/selfheal/` | Controller, topology, telemetry and fitted model |
 | `dashboard/` | Local Python server and browser interface |
 | `evidence/` | Original recordings, screenshots, checksums and [results](evidence/results.csv) |
 | `tests/` | Automated checks |
 | `tools/` | Saved-evidence restore utility |
-| `documents/` | [Report PDF](documents/L13_L14_Team5_Report.pdf) and [presentation PDF](documents/L13_L14_Team5_PPT.pdf) |
+| Repository root | [Report PDF](L13_L14_Team5_Report.pdf) and [presentation PDF](L13_L14_Team5_PPT.pdf) |
 
-Submission ZIPs in the repository root: `L13_L14_Team5_SourceCode.zip` (complete
-project) and `L13_L14_Team5_Screenshots.zip` (four dashboard captures). Extract the
-source ZIP and run the setup commands from its `L13_L14_Team5/` folder.
+Root ZIPs: `L13_L14_Team5_SourceCode.zip` contains the project files, model,
+recorded evidence, report and presentation. `L13_L14_Team5_Screenshots.zip`
+contains the four dashboard captures. Git data, virtual environments, editor
+settings and generated files are excluded. Extract both ZIPs into the same
+location to combine their `L13_L14_Team5/` folders, then run setup from that folder.
 
 New runs are saved under `.runtime/`. This directory and the local `.venv/`
 environment are ignored by Git.
