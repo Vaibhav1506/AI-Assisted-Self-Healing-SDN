@@ -3,6 +3,8 @@
 **BCSE308P Computer Networks Lab · Team 5 · Slot L13 + L14**  
 Vaibhav Bakshi · 24BCE2052
 
+Submission filename prefix: `L13_L14_Team5`.
+
 This project uses **Mininet** to emulate a network with primary and backup paths.
 A Python controller detects packet loss, delay, congestion or link failure using
 Random Forest detection or fixed thresholds, then reroutes traffic through
@@ -103,10 +105,10 @@ six switches, RF + loss guard, 4 Mbps traffic and 10 Mbps links.
 
 | Screenshot | Recorded stage |
 | --- | --- |
-| [Healthy primary](evidence/screenshots/01-healthy-primary.jpg) | At 8 s: primary selected, zero probe loss |
-| [Fault and failover](evidence/screenshots/02-fault-and-failover.jpg) | At 13 s: link failure detected, backup selected |
-| [Backup recovery](evidence/screenshots/03-backup-recovery.jpg) | At 22 s: healthy application probes and verified recovery |
-| [Primary restored](evidence/screenshots/04-primary-restored-timeline.jpg) | Complete timeline, including fault clearance and automatic return |
+| [Healthy primary](evidence/screenshots/L13_L14_Team5_Screenshot_01_Healthy_Primary.jpg) | At 8 s: primary selected, zero probe loss |
+| [Fault and failover](evidence/screenshots/L13_L14_Team5_Screenshot_02_Fault_Failover.jpg) | At 13 s: link failure detected, backup selected |
+| [Backup recovery](evidence/screenshots/L13_L14_Team5_Screenshot_03_Backup_Recovery.jpg) | At 22 s: healthy application probes and verified recovery |
+| [Primary restored](evidence/screenshots/L13_L14_Team5_Screenshot_04_Primary_Restored.jpg) | Complete timeline, including fault clearance and automatic return |
 
 ## Tests and project files
 
@@ -123,7 +125,7 @@ python3 -B -m unittest discover -s tests -v
 | `evidence/` | Original recordings, screenshots, checksums and [results](evidence/results.csv) |
 | `tests/` | Automated checks |
 | `tools/` | Saved-evidence restore utility |
-| `documents/` | [Report PDF](documents/L13_L14_Team5_Report_24BCE2052_Vaibhav%20Bakshi.pdf) and [presentation PDF](documents/L13_L14_Team5_PPT_24BCE2052_Vaibhav%20Bakshi.pdf) |
+| `documents/` | [Report PDF](documents/L13_L14_Team5_Report.pdf) and [presentation PDF](documents/L13_L14_Team5_PPT.pdf) |
 
 New runs are saved under `.runtime/`. This directory and the local `.venv/`
 environment are ignored by Git.
