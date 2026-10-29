@@ -1,5 +1,0 @@
-{"elapsed_s": 0.00011147799887112342, "event": "started", "path": "primary"}
-{"elapsed_s": 10.001998201001697, "event": "fault_on", "scenario": "congestion", "path": "primary"}
-{"elapsed_s": 12.29096945299898, "event": "route_change", "source": "primary", "destination": "backup", "reason": "degradation", "install_s": 0.01716362000297522}
-{"elapsed_s": 26.00369161100025, "event": "fault_off", "scenario": "congestion", "path": "primary"}
-{"elapsed_s": 36.16606766000041, "event": "completed", "receiver_mbps": 3.8862127496412455, "udp_loss_pct": 2.8072715572715574, "udp_jitter_ms": 0.07852702367580965, "received_bytes": 17496184}

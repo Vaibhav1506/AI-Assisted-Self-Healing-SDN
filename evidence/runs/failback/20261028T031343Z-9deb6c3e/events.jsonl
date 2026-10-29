@@ -1,6 +1,0 @@
-{"elapsed_s": 0.00012539499994090875, "event": "started", "path": "primary"}
-{"elapsed_s": 10.012969009000017, "event": "fault_on", "scenario": "link_down", "path": "primary"}
-{"elapsed_s": 12.11419672299985, "event": "route_change", "source": "primary", "destination": "backup", "reason": "link_down", "install_s": 0.018239854000057676}
-{"elapsed_s": 28.006364287999986, "event": "fault_off", "scenario": "link_down", "path": "primary"}
-{"elapsed_s": 33.36808096499999, "event": "route_change", "source": "backup", "destination": "primary", "reason": "primary_restored", "install_s": 0.01728064799999629}
-{"elapsed_s": 36.11667340300005, "event": "completed", "receiver_mbps": 3.764189810775868, "udp_loss_pct": 5.863899613899614, "udp_jitter_ms": 0.056145267419943384, "received_bytes": 16945944}

@@ -1,4 +1,0 @@
-{"elapsed_s": 0.00017372799993609078, "event": "started", "path": "primary"}
-{"elapsed_s": 10.013198519998696, "event": "fault_on", "scenario": "both_down", "path": "primary"}
-{"elapsed_s": 28.01185075199828, "event": "fault_off", "scenario": "both_down", "path": "primary"}
-{"elapsed_s": 36.115441791000194, "event": "completed", "receiver_mbps": 1.9987740174785253, "udp_loss_pct": 50.01608751608752, "udp_jitter_ms": 0.03063715313522047, "received_bytes": 8997872}
