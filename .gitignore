@@ -4,6 +4,8 @@ venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
 .coverage
 htmlcov/
 
@@ -14,11 +16,9 @@ htmlcov/
 .codex-finalizer/
 Archive/
 
-# Use the named submission copies in GitHub
-Deliverables/Self_Healing_SDN_Report.docx
-Deliverables/Self_Healing_SDN_Presentation.pptx
-Deliverables/L13_L14_Team5_SourceCode.zip
-Deliverables/L13_L14_Team5_Screenshots.zip
+# Generated bundles and superseded submission names
+documents/*.zip
+documents/Self_Healing_*
 
 # Local settings and credentials
 .vscode/
@@ -29,6 +29,10 @@ Deliverables/L13_L14_Team5_Screenshots.zip
 *.pem
 *.key
 *.log
+*.tmp
+*.temp
+*.bak
+*~
 .DS_Store
 Thumbs.db
 ~$*

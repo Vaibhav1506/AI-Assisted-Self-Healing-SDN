@@ -1,10 +1,13 @@
+# Keep source and documentation line endings consistent across platforms.
 * text=auto
 *.py text eol=lf
 *.md text eol=lf
 *.txt text eol=lf
 *.json text eol=lf
 *.jsonl text eol=lf
+# Preserve raw evidence bytes so manifest checksums survive a checkout.
 *.csv -text
+# Treat the model, submission documents and screenshots as binary assets.
 *.joblib binary
 *.pdf binary
 *.pptx binary
